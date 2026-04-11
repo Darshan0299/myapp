@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cloth Store</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    header {
+        background: #111;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .product {
+        background: white;
+        margin: 15px;
+        padding: 15px;
+        width: 200px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        background: black;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background: #333;
+    }
+
+    .cart {
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Cloth Store</h2>
+    <div class="cart">🛒 Cart: <span id="cartCount">0</span></div>
+</header>
+
+<div class="container">
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1520975922284-7c1a1b2d3a0b" />
+        <h3>T-Shirt</h3>
+        <p>₹499</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" />
+        <h3>Jeans</h3>
+        <p>₹999</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb" />
+        <h3>Jacket</h3>
+        <p>₹1499</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        cartCount++;
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+
+</body>
+</html>
