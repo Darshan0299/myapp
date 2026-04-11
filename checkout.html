@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Checkout</h2>
+
+<input placeholder="Name">
+<input placeholder="Address">
+<input placeholder="Phone">
+
+<a href="success.html">
+<button onclick="placeOrder()">Place Order</button>
+</a>
+
+<script>
+function placeOrder(){
+  localStorage.removeItem("cart");
+}
+</script>
+
+</body>
+</html>
