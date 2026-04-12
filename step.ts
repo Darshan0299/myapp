@@ -1,8 +1,10 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { Builder, By } from "selenium-webdriver";
+import type { WebDriver } from "selenium-webdriver";
 import * as assert from "assert";
+import * as fs from "fs";
 
-let driver;
+let driver: WebDriver;
 
 Given("User is on login page", async function () {
   driver = await new Builder().forBrowser("chrome").build();
