@@ -12,14 +12,15 @@
 <input placeholder="Address">
 <input placeholder="Phone">
 
-<a href="success.html">
-<button onclick="placeOrder()">Place Order</button>
-</a>
+<button id="placeBtn">Place Order</button>
 
+<script src="app.js"></script>
 <script>
 function placeOrder(){
   localStorage.removeItem("cart");
+  window.location.href = 'ordersuccesspage.html';
 }
+document.getElementById('placeBtn').addEventListener('click', placeOrder);
 </script>
 
 </body>

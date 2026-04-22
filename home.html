@@ -11,24 +11,50 @@
   <a href="cart.html">🛒 Cart</a>
 </header>
 
-<div class="grid">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <div class="card">
+<div class="category-bar">
+  <button data-cat="all" class="active">All</button>
+  <button data-cat="tops">Tops</button>
+  <button data-cat="bottoms">Bottoms</button>
+  <button data-cat="outer">Outerwear</button>
+</div>
+
+<div class="products">
+
+  <div class="product-card card" data-category="tops">
+    <img class="product-img" src="images/tshirt.svg" alt="T-Shirt">
     <h3>T-Shirt</h3>
     <p>₹499</p>
-    <button onclick="add('T-Shirt',499)">Add to Cart</button>
+    <button onclick="add('T-Shirt',499,'images/tshirt.svg')">Add to Cart</button>
   </div>
 
-  <div class="card">
+  <div class="product-card card" data-category="bottoms">
+    <img class="product-img" src="images/jeans.svg" alt="Jeans">
     <h3>Jeans</h3>
     <p>₹999</p>
-    <button onclick="add('Jeans',999)">Add to Cart</button>
+    <button onclick="add('Jeans',999,'images/jeans.svg')">Add to Cart</button>
   </div>
 
-  <div class="card">
+  <div class="product-card card" data-category="outer">
+    <img class="product-img" src="images/jacket.svg" alt="Jacket">
     <h3>Jacket</h3>
     <p>₹1499</p>
-    <button onclick="add('Jacket',1499)">Add to Cart</button>
+    <button onclick="add('Jacket',1499,'images/jacket.svg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card card" data-category="tops">
+    <img class="product-img" src="images/hoodie.jpg" alt="Hoodie">
+    <h3>Hoodie</h3>
+    <p>₹799</p>
+    <button onclick="add('Hoodie',799,'images/hoodie.jpg')">Add to Cart</button>
+  </div>
+
+  <div class="product-card card" data-category="bottoms">
+    <img class="product-img" src="images/shorts.jpg" alt="Shorts">
+    <h3>Shorts</h3>
+    <p>₹399</p>
+    <button onclick="add('Shorts',399,'images/shorts.jpg')">Add to Cart</button>
   </div>
 
 </div>
